@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet-do‘kon</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 1400px;
+        margin: auto;
+        padding: 20px;
+      }
+      .products-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .product {
+        border: 1px solid #ddd;
+        padding: 20px;
+        width: 300px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+      }
+      .product:hover {
+        transform: scale(1.05);
+        background: #fff3e0;
+      }
+      .product img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .payme-btn {
+        background-color: #28a745;
+      }
+      .payme-btn:hover {
+        background-color: #218838;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">
+          Internet-do‘kon
+        </h1>
+        <div id="products" class="products-grid"></div>
+  
+    
+
+        <div class="contact-section">
+            <div class="contact-links">
+                <a href="https://t.me/ashirboevv" target="_blank" class="contact-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                    <p>@ashirboevv</p>
+                </a>
+                <a href="https://instagram.com/ashirboevv" target="_blank" class="contact-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                    <p>@ashirboevv</p>
+                </a>
+                <div class="contact-item">
+                    <img src="https://avatars.mds.yandex.net/i?id=aee2e865062209290d391950c84cb2fff36ea862-5490830-images-thumbs&n=13" alt="Telefon">
+                    <p>📞 +998 (33)-346-75-74</p>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        
+    
+    
+    </div>
+    <style>
+     .contact-section {
+    text-align: center;
+    background: linear-gradient(45deg, #007bff, #d6249f);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    color: white;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.contact-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-item img:hover {
+    transform: scale(1.2);
+}
+
+.contact-item p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+    </style>
+
+    <script>
+      let products = [ 
+      {
+          img: "https://avatars.mds.yandex.net/i?id=60a2d6bbff865b691150ba26e710b57590c2f4f1-9149086-images-thumbs&n=13",
+          title: "Ko`ylak",
+          price: "250 000so‘m",
+          payme: "https://payme.uz/example",
+        },
+        {
+          img: "https://avatars.mds.yandex.net/i?id=0191e6cbf4ca5023c11d3fbe429e0f9d82d80f90-5238951-images-thumbs&n=13",
+          title: "Shim",
+          price: "200 000 so‘m",
+          payme: "https://payme.uz/example",
+        },
+        {
+          img: "https://avatars.mds.yandex.net/i?id=d76c19c52bccf5c3f513ea44e311afd41c9f21e7-8206955-images-thumbs&n=13",
+          title: "Oyoq kiyim",
+          price: "250 000 so‘m",
+          payme: "https://payme.uz/example",
+        },
+        {
+          img: "https://avatars.mds.yandex.net/i?id=1bbc67a2e059c01382f8a957088e7fa7136e8e2d-10964795-images-thumbs&n=13",
+          title: "Pidjak",
+          price: "300 000 so‘m",
+          payme: "https://payme.uz/example",
+        },
+        {
+          img: "https://avatars.mds.yandex.net/i?id=f7268a96ba4f56ed83f57f35be596e320bccec45-4614383-images-thumbs&n=13",
+          title: "Kurtka",
+          price: "350 000 so‘m",
+          payme: "https://payme.uz/example",
+        },
+        {
+          img: "https://avatars.mds.yandex.net/i?id=bcba04e0f88545210a6320a248d6024aee8efb23-5235840-images-thumbs&n=13",
+          title: "Futbolka",
+          price: "100 000 so‘m",
+          payme: "https://payme.uz/example",
+        },
+        {
+          img: "https://avatars.mds.yandex.net/i?id=947f7186bb1b6053b0fa78c958a8a7f40dab10f9-5904855-images-thumbs&n=13",
+          title: "Shortik",
+          price: "120 000 so‘m",
+          payme: "https://payme.uz/example",
+        },
+        {
+          img: "https://avatars.mds.yandex.net/i?id=16ba8e1f5c759f3cb45aac1df1ff17776b8e6355-6291274-images-thumbs&n=13",
+          title: "Botinka",
+          price: "400 000 so‘m",
+          payme: "https://payme.uz/example",
+        },
+        {
+          img: "https://avatars.mds.yandex.net/i?id=d2e53e1be5b10bb745753cc8651799b0b2a1408e-5268266-images-thumbs&n=13",
+          title: "Shapka",
+          price: "80 000 so‘m",
+          payme: "https://payme.uz/example",
+        },
+        { 
+          img: "https://avatars.mds.yandex.net/i?id=a48ecd3a4bca6d9e901eb198ee6cd1d61432b627-8311401-images-thumbs&n=13",
+          title: "Krossovka",
+          price: "500 000 so‘m",
+          payme: "https://payme.uz/example",
+        },
+      ];
+
+      let productsGrid = document.getElementById("products");
+      products.forEach((product) => {
+        let productElement = document.createElement("div");
+        productElement.className = "product";
+        productElement.innerHTML = `
+                <img src="${product.img}" alt="${product.title}">
+                <h3>${product.title}</h3>
+                <p>${product.price}</p>
+                <div class="buttons">
+                    <a href="https://t.me/ashirboevv" target="_blank">
+                        <button class="buy">Sotib olish</button>
+                    </a>
+                    <a href="${product.payme}" target="_blank">
+                        <button class="payme-btn">Payme orqali to‘lash</button>
+                    </a>
+                </div>
+            `;
+        productsGrid.appendChild(productElement);
+      });
+    </script>
+  </body>
+</html>
